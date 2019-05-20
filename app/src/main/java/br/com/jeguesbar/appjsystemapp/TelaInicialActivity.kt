@@ -33,12 +33,12 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         // intent é um atributo herdado de Activity
         val args = intent.extras
         // recuperar o parâmetro do tipo String
-        val nomeUser = args.getString("nome")
+        //val nomeUser = args.getString("nome")
 
-        Toast.makeText(context, "Parâmetro: $nomeUser", Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, "Parâmetro: $nomeUser", Toast.LENGTH_LONG).show()
 
         val mensagem = findViewById<TextView>(R.id.mensagemInicial)
-        mensagem.text = "Bem vindo $nomeUser"
+        //mensagem.text = "Bem vindo $nomeUser"
 //
 //        val botaoSair = findViewById<Button>(R.id.botaoSair)
 //        botaoSair.setOnClickListener { cliqueSair() }
