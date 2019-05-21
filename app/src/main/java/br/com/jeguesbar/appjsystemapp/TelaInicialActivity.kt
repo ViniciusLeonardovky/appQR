@@ -37,7 +37,7 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
         //Toast.makeText(context, "Parâmetro: $nomeUser", Toast.LENGTH_LONG).show()
 
-        val mensagem = findViewById<TextView>(R.id.mensagemInicial)
+        //val mensagem = findViewById<TextView>(R.id.mensagemInicial)
         //mensagem.text = "Bem vindo $nomeUser"
 //
 //        val botaoSair = findViewById<Button>(R.id.botaoSair)

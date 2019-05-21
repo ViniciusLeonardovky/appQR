@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.*
 import br.com.jeguesbar.appjsystemapp.R
 import com.google.zxing.integration.android.IntentIntegrator
+import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.qrlogin.*
 
@@ -126,10 +127,16 @@ class MainActivity : DebugActivity() {
             }
 
         } else {
-            //
+
+            // incializando a telaINicialActivity
             val intent = Intent(context, TelaInicialActivity::class.java)
+
             // fazer a chamada
             //startActivity(intent)
+            val getComanda = result.contents.toString().toInt()
+            Toast.makeText(this, "$getComanda", Toast.LENGTH_LONG).show()
+
+            //value_comanda.setText(getComanda)
 
             // fazer a chamada esperando resultado
             startActivityForResult(intent, 1)
