@@ -140,7 +140,7 @@ class MainActivity : DebugActivity() {
                     getComanda != "70" && getComanda != "80" && getComanda != "90" &&
                     getComanda != "100" && getComanda != "110" && getComanda != "120") {
 
-                Toast.makeText(this, "Comanda: $getComanda não cadastrada",
+                Toast.makeText(this, "Comanda não cadastrada",
                         Toast.LENGTH_LONG).show()
 
             } else {
