@@ -133,7 +133,30 @@ class MainActivity : DebugActivity() {
 
             // fazer a chamada
             //startActivity(intent)
-            val getComanda = result.contents.toString().toInt()
+            val getComanda = result.contents.toString()
+
+            if (getComanda != "10" && getComanda != "20" && getComanda != "30" &&
+                    getComanda != "40" && getComanda != "50" && getComanda != "60" &&
+                    getComanda != "70" && getComanda != "80" && getComanda != "90" &&
+                    getComanda != "100" && getComanda != "110" && getComanda != "120") {
+
+                Toast.makeText(this, "Comanda: $getComanda não cadastrada",
+                        Toast.LENGTH_LONG).show()
+
+            } else {
+
+                getComanda.toInt()
+
+                Toast.makeText(this, "Comanda: $getComanda", Toast.LENGTH_LONG).show()
+
+                //value_comanda.setText(getComanda.toString())
+
+                // fazer a chamada esperando resultado
+                startActivityForResult(intent, 1)
+                super.onActivityResult(requestCode, resultCode, data)
+
+            }
+            /*
             Toast.makeText(this, "$getComanda", Toast.LENGTH_LONG).show()
 
             //value_comanda.setText(getComanda)
@@ -141,6 +164,7 @@ class MainActivity : DebugActivity() {
             // fazer a chamada esperando resultado
             startActivityForResult(intent, 1)
             super.onActivityResult(requestCode, resultCode, data)
+            */
         }
     }
 }

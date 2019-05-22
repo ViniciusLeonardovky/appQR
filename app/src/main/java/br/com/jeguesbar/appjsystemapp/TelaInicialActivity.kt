@@ -77,10 +77,13 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
     }
 
     fun onClickProduto(produto: Produtos) {
-        Toast.makeText(context, "Clicou ${produto.nome}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "${produto.nome} adicionado ao seu pedido!", Toast.LENGTH_SHORT).show()
+
+        /*
         val intent = Intent(this, ProdutoActivity::class.java)
         intent.putExtra("produto", produto)
         startActivity(intent)
+        */
     }
 
     override fun onResume() {
