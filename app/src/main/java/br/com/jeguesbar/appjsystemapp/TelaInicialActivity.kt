@@ -16,6 +16,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import br.com.jeguesbar.appjsystemapp.R
+import kotlinx.android.synthetic.main.activity_pedidos.*
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 
 class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -32,16 +33,6 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         // acessar parametros da intnet
         // intent é um atributo herdado de Activity
         val args = intent.extras
-        // recuperar o parâmetro do tipo String
-        //val nomeUser = args.getString("nome")
-
-        //Toast.makeText(context, "Parâmetro: $nomeUser", Toast.LENGTH_LONG).show()
-
-        //val mensagem = findViewById<TextView>(R.id.mensagemInicial)
-        //mensagem.text = "Bem vindo $nomeUser"
-//
-//        val botaoSair = findViewById<Button>(R.id.botaoSair)
-//        botaoSair.setOnClickListener { cliqueSair() }
 
         // colocar toolbar
         var toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -70,13 +61,14 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
             this.produtos = ProdutoService.getProdutos(context)
             runOnUiThread {
                 recyclerProd?.adapter = ProdutoAdapter(produtos) { onClickProduto(it) }
-                enviaNotificacao()
+                //enviaNotificacao()
             }
         }.start()
 
     }
 
     fun onClickProduto(produto: Produtos) {
+
         Toast.makeText(context, "${produto.nome} adicionado ao seu pedido!", Toast.LENGTH_SHORT).show()
 
         /*

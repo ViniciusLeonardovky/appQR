@@ -15,4 +15,11 @@
 			android:layout_height="wrap_content" android:id="@+id/textView2"
 			android:textColor="@color/cardview_light_background" android:textSize="36sp"/>
 
+	<TextView
+		android:id="@+id/textViewPedido"
+		android:layout_width="match_parent"
+		android:layout_height="72dp"
+		android:textColor="@android:color/white"
+		android:textSize="24sp" />
+
 </LinearLayout>
